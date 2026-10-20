@@ -18,7 +18,7 @@ class _PoliFormState extends State<PoliForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Add Poli")),
+      appBar: AppBar(title: const Text("Tambah Poli")),
       body: SingleChildScrollView(
         child: Form(
           key: _formKey,
