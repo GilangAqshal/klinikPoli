@@ -25,14 +25,14 @@ class _PoliUpdateFormState extends State<PoliUpdateForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Ubah Polii")),
+      appBar: AppBar(title: const Text("Ubah Poli")),
       body: SingleChildScrollView(
         child: Form(
           key: _formKey,
           child: Column(
             children: [
               _fieldNamaPoli(),
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
               _tombolSimpanChange(),
             ],
           ),
