@@ -49,7 +49,7 @@ class Sidebar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.logout_rounded),
-            title: Text("Keluar"),
+            title: Text("Exit"),
             onTap: () {
               Navigator.pushAndRemoveUntil(
                 context,
