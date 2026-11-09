@@ -29,7 +29,7 @@ class Sidebar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.accessible),
-            title: Text("Poli"),
+            title: Text("Faskes"),
             onTap: () {
               Navigator.push(
                 context,
