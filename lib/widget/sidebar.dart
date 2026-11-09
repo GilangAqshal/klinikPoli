@@ -19,7 +19,7 @@ class Sidebar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.home),
-            title: Text("Beranda"),
+            title: Text("Home"),
             onTap: () {
               Navigator.push(
                 context,
