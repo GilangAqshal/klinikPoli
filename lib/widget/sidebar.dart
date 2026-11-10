@@ -39,12 +39,12 @@ class Sidebar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.people),
-            title: Text("Officer"),
+            title: Text("Pegawai"),
             onTap: () {},
           ),
           ListTile(
             leading: Icon(Icons.account_box_sharp),
-            title: Text("Patient"),
+            title: Text("Pasien"),
             onTap: () {},
           ),
           ListTile(
