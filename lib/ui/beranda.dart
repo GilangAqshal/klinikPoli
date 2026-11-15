@@ -73,7 +73,7 @@ class Beranda extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      "SELAMAT DATANG 👋",
+                      "SELAMAT DATANG",
                       style: TextStyle(
                         color: Colors.white70,
                         fontSize: 11,
@@ -85,7 +85,7 @@ class Beranda extends StatelessWidget {
                     const SizedBox(height: 12),
 
                     const Text(
-                      "Hello, Administrator!",
+                      "Hello, GIlang Aqshal!",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 23,
