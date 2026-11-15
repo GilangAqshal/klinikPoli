@@ -141,66 +141,6 @@ class Beranda extends StatelessWidget {
 
               const SizedBox(height: 28),
 
-              // STATISTIK
-              const Text(
-                "Ringkasan Data",
-                style: TextStyle(
-                  color: darkColor,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-
-              const SizedBox(height: 5),
-
-              const Text(
-                "Informasi data sistem saat ini",
-                style: TextStyle(color: Colors.blueGrey, fontSize: 12),
-              ),
-
-              const SizedBox(height: 16),
-
-              // STATISTIC GRID
-              GridView.count(
-                crossAxisCount: 2,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                crossAxisSpacing: 14,
-                mainAxisSpacing: 14,
-                childAspectRatio: 1.45,
-                children: [
-                  _statCard(
-                    title: "Total Pasien",
-                    value: "0",
-                    icon: Icons.people_alt_rounded,
-                    color: const Color(0xFF2563EB),
-                  ),
-
-                  _statCard(
-                    title: "Total Pegawai",
-                    value: "0",
-                    icon: Icons.badge_rounded,
-                    color: const Color(0xFF059669),
-                  ),
-
-                  _statCard(
-                    title: "Total Poli",
-                    value: "0",
-                    icon: Icons.local_hospital_rounded,
-                    color: const Color(0xFF9333EA),
-                  ),
-
-                  _statCard(
-                    title: "Total Kunjungan",
-                    value: "0",
-                    icon: Icons.calendar_month_rounded,
-                    color: const Color(0xFFEA580C),
-                  ),
-                ],
-              ),
-
-              const SizedBox(height: 28),
-
               // MENU CEPAT
               const Text(
                 "Menu Akses Cepat",
@@ -313,62 +253,6 @@ class Beranda extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-
-  // STATISTIC CARD
-  static Widget _statCard({
-    required String title,
-    required String value,
-    required IconData icon,
-    required Color color,
-  }) {
-    return Container(
-      padding: const EdgeInsets.all(15),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(17),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.025),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            padding: const EdgeInsets.all(9),
-            decoration: BoxDecoration(
-              color: color.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Icon(icon, color: color, size: 21),
-          ),
-
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                value,
-                style: const TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: darkColor,
-                ),
-              ),
-
-              Text(
-                title,
-                style: const TextStyle(fontSize: 11, color: Colors.blueGrey),
-              ),
-            ],
-          ),
-        ],
       ),
     );
   }
