@@ -1,14 +1,14 @@
 class Pegawai {
-  int? id;
-  String nip;
-  String nama;
-  String tanggalLahir;
-  String nomorTelepon;
-  String email;
-  String password;
+  final int id;
+  final String nip;
+  final String nama;
+  final String tanggalLahir;
+  final String nomorTelepon;
+  final String email;
+  final String password;
 
-  Pegawai({
-    this.id,
+  const Pegawai({
+    required this.id,
     required this.nip,
     required this.nama,
     required this.tanggalLahir,
@@ -17,26 +17,23 @@ class Pegawai {
     required this.password,
   });
 
-  factory Pegawai.fromJson(Map<String, dynamic> json) {
-    return Pegawai(
-      id: json['id'],
-      nip: json['nip'],
-      nama: json['nama'],
-      tanggalLahir: json['tanggal_lahir'],
-      nomorTelepon: json['nomor_telepon'],
-      email: json['email'],
-      password: json['password'] ?? '',
-    );
-  }
+  Map<String, String> toMap() => {
+    'id': id.toString(),
+    'nip': nip,
+    'nama': nama,
+    'tanggal_lahir': tanggalLahir,
+    'nomor_telepon': nomorTelepon,
+    'email': email,
+    'password': password,
+  };
 
-  Map<String, dynamic> toJson() {
-    return {
-      'nip': nip,
-      'nama': nama,
-      'tanggal_lahir': tanggalLahir,
-      'nomor_telepon': nomorTelepon,
-      'email': email,
-      'password': password,
-    };
-  }
+  factory Pegawai.fromMap(Map<String, String> map) => Pegawai(
+    id: int.tryParse(map['id'] ?? '') ?? 0,
+    nip: map['nip'] ?? '',
+    nama: map['nama'] ?? '',
+    tanggalLahir: map['tanggal_lahir'] ?? '',
+    nomorTelepon: map['nomor_telepon'] ?? '',
+    email: map['email'] ?? '',
+    password: map['password'] ?? '',
+  );
 }

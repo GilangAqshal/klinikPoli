@@ -1,13 +1,13 @@
 class Pasien {
-  int? id;
-  String nomorRm;
-  String nama;
-  String tanggalLahir;
-  String nomorTelepon;
-  String alamat;
+  final int id;
+  final String nomorRm;
+  final String nama;
+  final String tanggalLahir;
+  final String nomorTelepon;
+  final String alamat;
 
-  Pasien({
-    this.id,
+  const Pasien({
+    required this.id,
     required this.nomorRm,
     required this.nama,
     required this.tanggalLahir,
@@ -15,24 +15,21 @@ class Pasien {
     required this.alamat,
   });
 
-  factory Pasien.fromJson(Map<String, dynamic> json) {
-    return Pasien(
-      id: json['id'],
-      nomorRm: json['nomor_rm'],
-      nama: json['nama'],
-      tanggalLahir: json['tanggal_lahir'],
-      nomorTelepon: json['nomor_telepon'],
-      alamat: json['alamat'],
-    );
-  }
+  Map<String, String> toMap() => {
+    'id': id.toString(),
+    'nomor_rm': nomorRm,
+    'nama': nama,
+    'tanggal_lahir': tanggalLahir,
+    'nomor_telepon': nomorTelepon,
+    'alamat': alamat,
+  };
 
-  Map<String, dynamic> toJson() {
-    return {
-      'nomor_rm': nomorRm,
-      'nama': nama,
-      'tanggal_lahir': tanggalLahir,
-      'nomor_telepon': nomorTelepon,
-      'alamat': alamat,
-    };
-  }
+  factory Pasien.fromMap(Map<String, String> map) => Pasien(
+    id: int.tryParse(map['id'] ?? '') ?? 0,
+    nomorRm: map['nomor_rm'] ?? '',
+    nama: map['nama'] ?? '',
+    tanggalLahir: map['tanggal_lahir'] ?? '',
+    nomorTelepon: map['nomor_telepon'] ?? '',
+    alamat: map['alamat'] ?? '',
+  );
 }
