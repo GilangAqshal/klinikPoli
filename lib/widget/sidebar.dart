@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../ui/beranda.dart';
 import '../ui/login.dart';
 import '../ui/poli_page.dart';
+import '../ui/pegawai_page.dart';
+import '../ui/pasien_page.dart';
 
 class Sidebar extends StatelessWidget {
   const Sidebar({Key? key}) : super(key: key);
@@ -146,6 +148,10 @@ class Sidebar extends StatelessWidget {
             title: "Pegawai",
             onTap: () {
               Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const PegawaiPage()),
+              );
             },
           ),
 
@@ -156,6 +162,10 @@ class Sidebar extends StatelessWidget {
             title: "Pasien",
             onTap: () {
               Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const PasienPage()),
+              );
             },
           ),
 
